@@ -1,0 +1,38 @@
+<h3>Using Http Module and Forms Module to Search For Webcams</h3>
+<h5>{{city}} &nbsp;{{state}}</h5>
+
+   <form #f="ngForm" (ngSubmit) = "getWebcams(f.value)">
+
+        <label for="city">Enter city</label>
+        <input id="city" name="city" type="text" ngControl="city" [(ngModel)]="city" required placeholder="Enter a city">
+        <span [hidden] ="!f.form.hasError('required','city')">Please enter a city</span>
+
+        <label for="state">Enter state</label>
+        <input id="state" name="state" type="text" ngControl="state" [(ngModel)]="state" required placeholder="Enter a state abbrev.">
+        <span [hidden] ="!f.form.hasError('required','state')">Please enter a state</span>
+
+        <button type="submit" [disabled]=!f.form.valid class="btn-info btn-md">Find Webcams</button>
+
+        </form>
+        
+<div class="row">
+<div class="col-sm-6 col-md-3">
+
+<div *ngIf = "message">
+    <div class="well">
+        <p class="bg-danger">{{ message }}</p>
+    </div>
+</div>
+
+    <ul class="list-group">
+        <li *ngFor = "let webcam of webcams" class="list-group-item">
+          <a href="{{webcam.CAMURL}}" target="blank">{{ webcam.city }},{{webcam.state}}</a>
+        </li>
+    </ul>
+</div>
+</div> 
+
+     
+
+<p class="logo"><a href="https://www.wunderground.com/"><img src="https://www.wunderground.com/logos/images/wundergroundLogo_4c_rev_horz.jpg"></a></p>
+

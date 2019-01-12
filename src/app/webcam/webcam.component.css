@@ -1,0 +1,33 @@
+.ng-invalid input#city, .ng-invalid input#state{
+    border: 1px solid red;
+ }
+ span {
+     color: #000;
+     float: left;
+ }
+ label {
+     margin-left: -9999px;
+ }
+ input#city, input#state{
+     display: list-item;
+ }
+button.btn-info.btn-md {
+     clear: both;
+     float: left;
+ }
+ .list-group, .well {
+     margin-top: 50px;
+ }
+ .logo {
+     margin-top: 15px;
+     clear: both;
+ }
+ .row, button{
+     margin-top: 15px;
+ }
+ h5 {
+     text-transform: capitalize;
+ }
+ .bg-danger {
+     text-align: center;
+ }

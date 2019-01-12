@@ -1,0 +1,20 @@
+<h3>{{ ngForTitle }}</h3>
+<div class="row">
+    <div class="col-sm-6 col-md-3">
+        <ul class="list-group">
+            <li *ngFor = "let day of days" class="list-group-item">
+                {{ day }}
+            </li>
+        </ul>
+    </div>
+</div> 
+
+
+<h3>Using Pipes to Format the Date</h3>
+<div class="row">
+   <div class="col-sm-4 col-md-4">
+        <div class="well">
+        <p>Today is: {{ todaysDate | date:'EEEE, MMMM, d, y'}}</p>
+        </div>
+    </div>
+</div> 

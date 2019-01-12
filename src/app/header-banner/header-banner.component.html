@@ -1,0 +1,25 @@
+<h1>{{ heading }}</h1>
+<h2>{{ headingSub }}</h2>
+
+    <button class="btn-info" (click)="toggleAbout()">{{displayAbout? "Hide About" : "Show About"}}</button>
+ 
+<div *ngIf="displayAbout">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="well">
+                <p>This is my first <a href="https://angular.io" target="blank">Angular</a> App. I am using Angular 2 for the framework 
+                and bootstrap for styling. I added specific styles for each component in two ways. I added styles directly to the @Component
+                decorator using the styles array and or styles were loaded from and external styles component. Since I am new to Angular 2 
+                I created a few simple components to get my feet wet. This about component uses a click function to toggle the about and
+                portfolio view. As my skills in Angular increase I hope to create more advanced apps. Hope you enjoy this and please check 
+                out my <a href="http://www.dukesnuz/portfolio/" target="blank">portfolio</a>.</p>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="well">
+                <a href="http://www.dukesnuz.com/portfolio/"><button class="btn-block btn-info btn-lg">My Porfolio</button></a>
+            </div>
+        </div>
+     </div>
+</div>
